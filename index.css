@@ -420,7 +420,9 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .header__text {
-    flex:1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .home__photo-container {
