@@ -406,6 +406,17 @@ body:not(.user-is-tabbing) a:focus {
 /* -------------- SC: HEADER ------------- */
 /* --------------------------------------- */
 
+/* -----------SC: ADDED THIS> CHECK IT OUT IF IT WORKS ------*/
+.header {
+    height: 100vh;
+    background-size: cover;
+    font-size: var(--font-size-normal);
+}
+
+.heading-primary span {
+    margin-top: 2rem; /* Adjust space as needed */
+}
+
 .header__text-box {
     display: flex;
     justify-content: space-between;
