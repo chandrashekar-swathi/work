@@ -1,5 +1,5 @@
 /* --------------------------------------- */
-/* ----- Basic Setup ----- */
+/* ------------ BASIC SETUP -------------- */
 /* --------------------------------------- */
 
 @font-face {
@@ -34,9 +34,9 @@
     --line-height-normal: 1.7;
     --line-height-small: 1.2;
 
-    --black: #000;
+    --black: #000000;
     --pink: #ff3258;
-    --white: #f0e9f2;
+    --white: #ffffffff;
     --white-1: #e5e5e6da;
 
 
@@ -70,9 +70,9 @@ body {
     font-size: var(--font-size-small);
     font-family: var(--font-stack);
     font-weight: 400;
-    color: var(--white-1);
+    color: var(--black);
     line-height: var(--line-height-normal);
-    background: var(--black);
+    background: var(--white);
     overflow-x: hidden;
 }
 
@@ -116,7 +116,7 @@ img {
 }
 
 /* --------------------------------------- */
-/* ----- Headlines and Paragraphs ----- */
+/* ----- SC: HEADLINES AND PARAGRAPHS ---- */
 /* --------------------------------------- */
 
 h1,
@@ -125,7 +125,7 @@ h3 {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     line-height: var(--line-height-small);
-    color: var(--white);
+    color: var(--black);
 }
 
 .heading-primary {
@@ -175,6 +175,7 @@ h3 {
 
 p {
     margin: var(--gutter-small-1) 0;
+    color: var(--black);
 }
 
 @media(max-width: 900px) {
@@ -184,11 +185,11 @@ p {
 }
 
 /* --------------------------------------- */
-/* ----- Buttons and Links ----- */
+/* ---------- SC: BUTTONS AND LINKS ------ */
 /* --------------------------------------- */
 
 a {
-    color: var(--white);
+    color: var(--black);
     font-weight: 400;
     font-family: 'Jost', sans-serif;
     transition: all .2s;
@@ -297,7 +298,9 @@ body:not(.user-is-tabbing) a:focus {
     font-family: sans-serif;
 }
 
-/* ----- Back to Top ----- */
+/* ------------------------------------ */
+/* ----------- SC: BACK TO HOME ------- */
+/* ------------------------------------ */
 
 .back-to-top {
     position: fixed;
@@ -332,7 +335,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- Navigation ----- */
+/* ----------- SC: NAVIGATION ------------ */
 /* --------------------------------------- */
 
 .nav {
@@ -400,12 +403,11 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- Header ----- */
+/* -------------- SC: HEADER ------------- */
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/header.jpg');
+    background: none;
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -437,114 +439,33 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- Work ----- */
+/* -------------- SC: ABOUT ME ----------- */
 /* --------------------------------------- */
 
-.work__box {
-    display: flex;
-    align-items: center;
+.about {
+    width: 90%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    margin: -7% auto 50px auto;
+    padding-top: 50px;
+    margin-top: 120px;
+    padding-bottom: 50px;
 }
-
-@media(max-width: 900px) {
-    .work__box {
-        align-items: initial;
-        flex-direction: column-reverse;
-    }
-}
-
-.work__box:not(:last-child) {
-    margin-bottom: 25rem;
-}
-
-@media(max-width: 500px) {
-    .work__box:not(:last-child) {
-        margin-bottom: 20rem;
-    }
-}
-
-.work__links {
-    display: flex;
-    align-items: center;
-}
-
-.work__text {
-    flex: 0 0 30%;
-}
-
-.work__list {
-    /* list-style-type: square; */
-    list-style-position: inside;
-    margin-bottom: var(--gutter-normal);
-}
-
-.work__code {
-    display: block;
-    height: 3rem;
-    margin-left: var(--gutter-normal);
-    transition: all .3s;
-}
-
-.work__code:hover {
-    transform: scale(1.2);
-}
-
-.work__image-box {
-    margin-bottom: var(--gutter-normal);
-}
-
-@media(min-width: 901px) {
-    .work__image-box {
-        flex: 1;
-        margin: 0 0 0 10rem;
-    }
-}
-
-@media(max-width: 900px) {
-    .work__code {
-        height: 4rem;
-    }
-}
-
-/* --------------------------------------- */
-/* ----- Clients ----- */
-/* --------------------------------------- */
-
-.client__logos {
-    display: flex;
-    justify-content: space-between;
-    filter: invert(100%) grayscale(100%) opacity(.8);
-}
-
-.client__logo {
-    height: 6.5rem;
-    max-width: 18rem;
-}
-
-@media(max-width: 1240px) {
-    .client__logos {
-        overflow-x: scroll;
-        padding: var(--gutter-normal);
-    }
-
-    .client__logo:not(:last-of-type) {
-        margin-right: var(--gutter-medium);
-    }
-}
-
-/* --------------------------------------- */
-/* ----- About ----- */
-/* --------------------------------------- */
 
 .about__content {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    justify-content: centre;
+    text-align: centre;
 }
 
 @media(max-width: 900px) {
     .about__content {
         flex-direction: column-reverse;
         align-items: initial;
+        text-align: centre;
     }
 }
 
@@ -555,6 +476,7 @@ body:not(.user-is-tabbing) a:focus {
 @media(min-width: 901px) {
     .about__text {
         flex: 0 0 35%;
+        text-align: justify;
     }
     
     .about__photo-container {
@@ -564,50 +486,10 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- Contact ----- */
+/* ------------- SC: CONTACT ME ---------- */
 /* --------------------------------------- */
 
 .contact__info {
     max-width: var(--container-medium-width);
 }
 
-/* --------------------------------------- */
-/* ----- Footer ----- */
-/* --------------------------------------- */
-
-.footer {
-    text-align: center;
-    padding: var(--gutter-medium) 0 var(--gutter-normal);
-}
-
-.footer__social-links {
-    display: flex;
-    justify-content: center;
-    padding: var(--gutter-normal) 0;
-    list-style: none;
-}
-
-.footer__social-link-item:not(:last-of-type) {
-    margin-right: var(--gutter-small);
-}
-
-.footer__social-image {
-    height: 4rem;
-}
-
-.footer__github-buttons {
-    display: flex;
-    justify-content: center;
-}
-
-.footer__github-buttons iframe {
-    height: 2.5rem;
-    width: 84px;
-    transform: translateY(3px);
-}
-
-@media(max-width: 500px) {
-    .footer {
-        padding: var(--gutter-medium) 0;
-    } 
-}
