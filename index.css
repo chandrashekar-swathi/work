@@ -469,20 +469,20 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-.about__photo-container {
-    margin-bottom: var(--gutter-normal);
-}
-
 @media(min-width: 901px) {
     .about__text {
         flex: 0 0 35%;
         text-align: justify;
     }
-    
-    .about__photo-container {
-        flex: 1;
-        margin: 0 var(--gutter-huge) 0 0;
-    }
+}
+
+.about__photo-container {
+    display: none; /* Remove the image and the image placeholder */
+}
+
+.about__text {
+    text-align: justify; /* Justify the text paragraph */
+    max-width: var(--container-medium-width); /* Limit text width for readability */
 }
 
 /* --------------------------------------- */
