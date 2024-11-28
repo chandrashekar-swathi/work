@@ -40,16 +40,16 @@
     --white-1: #e5e5e6da;
 
 
-    --container-max-width: 1180px;
-    --container-normal-width: 800px;
-    --container-medium-width: 700px; 
-    --container-small-width: 500px;
+    --container-max-width: 1200px;
+    --container-normal-width: 960px;
+    --container-medium-width: 720px; 
+    --container-small-width: 540px;
 
-    --gutter-huge: 12rem;
-    --gutter-medium: 6rem;
-    --gutter-normal: 3rem;
-    --gutter-small-1: 2.5rem;
-    --gutter-small: 2rem;
+    --gutter-huge: 8rem;
+    --gutter-medium: 4rem;
+    --gutter-normal: 2rem;
+    --gutter-small-1: 1.5rem;
+    --gutter-small: 1rem;
 
     --border-light: 1px solid rgb(36, 35, 35);
 }
